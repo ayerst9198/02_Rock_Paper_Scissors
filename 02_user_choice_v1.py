@@ -40,4 +40,5 @@ while user_choice != "xxx":
         user_choice = "scissors"
 
     # print out choice for comparison purposes
+
     print("You chose {}".format(user_choice))
