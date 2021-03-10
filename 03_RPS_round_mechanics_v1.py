@@ -1,6 +1,4 @@
-import random
-
-# Functions go here
+# Function used to check input is valid
 
 
 def check_rounds():
@@ -22,7 +20,6 @@ def check_rounds():
                 continue
 
         return response
-
 
 
 # Main routine goes here
@@ -67,17 +64,3 @@ while end_game == "no":
 
 print()
 print("Thank you for playing")
-
-# Lists of valid responses
-yes_no_list = ["yes", "no"]
-rps_list = ["rock", "paper", "scissors", "xxx"]
-
-# Asks user if they have played before.
-# If 'no' show instructions
-
-
-# ask user for # of rounds then loop
-
-
-# Ask user if they want to see their game history
-# If 'yes' show history

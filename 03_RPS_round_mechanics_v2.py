@@ -1,6 +1,4 @@
-import random
-
-# Functions go here
+# Function used to check input is valid
 
 
 def check_rounds():
@@ -24,7 +22,6 @@ def check_rounds():
         return response
 
 
-
 # Main routine goes here
 
 rounds_played = 0
@@ -40,44 +37,22 @@ while end_game == "no":
     # Rounds heading
     print()
     if rounds == "":
-        heading = "Continuous Mode: Rounds {}".format(rounds_played)
-
-        print(heading)
-        choose = input("{} or 'xxx' to end: ".format(choose_instruction))
-
-        # End game if exit code is typed
-        if choose == "xxx":
-            break
+        heading = "Continuous Mode: Rounds {}".format(rounds_played + 1)
     else:
         heading = "Round {} of {}".format(rounds_played + 1, rounds)
-        print(heading)
-        choose = input(choose_instruction)
-        if rounds_played == rounds - 1:
-            end_game = "yes"
+        print()
 
+    print(heading)
+    choose = input("{} or 'xxx' to "
+                   "end: ".format(choose_instruction))
+
+    if choose == "xxx":
+        break
 
     # rest of loop / game
     print("You choose {}".format(choose))
 
     rounds_played += 1
 
-    # end game if requested # of rounds has been played
-    if rounds_played == rounds:
-        break
-
 print()
 print("Thank you for playing")
-
-# Lists of valid responses
-yes_no_list = ["yes", "no"]
-rps_list = ["rock", "paper", "scissors", "xxx"]
-
-# Asks user if they have played before.
-# If 'no' show instructions
-
-
-# ask user for # of rounds then loop
-
-
-# Ask user if they want to see their game history
-# If 'yes' show history
