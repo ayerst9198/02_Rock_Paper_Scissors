@@ -60,50 +60,41 @@ end_game = "no"
 while end_game == "no":
 
     # Rounds heading
+    #Check if Continuous
+
     print()
     if rounds == "":
         heading = "Continuous Mode: Rounds {}".format(rounds_played)
 
-        print(heading)
-        choose_instruction = "Please choose rock (r), paper " \
-                             "(p), or scissors (s): "
-        choose_error = "Please choose from rock / " \
-                       "paper / scissors (or xxx to quit)"
 
-        # Ask user for choice and check it's valid
-
-        choose = choice_checker(choose_instruction, rps_list,
-                                choose_error)
-
-        # End game if exit code is typed
-
-        if choose == "xxx":
-            break
     else:
         heading = "Round {} of {}".format(rounds_played + 1, rounds)
-
-        print(heading)
-
-        choose = input(choose_instruction)
-        print(heading)
-        choose_instruction = "Please choose rock (r), paper " \
-                             "(p), or scissors (s): "
-        choose_error = "Please choose from rock / " \
-                       "paper / scissors (or xxx to quit)"
-
-        # Ask user for choice and check it's valid
-
-        choose = choice_checker(choose_instruction, rps_list,
-                                choose_error)
-
         # End game if exit code is typed
-
-        if choose == "xxx":
-            break
-        elif choose == "XXX":
-            break
-        if rounds_played == rounds - 1:
+        if rounds_played == "":
             end_game = "yes"
+
+    print(heading)
+
+    choose_instruction = "Please choose rock (r), paper " \
+                        "(p), or scissors (s): "
+    choose_error = "Please choose from rock / " \
+                    "paper / scissors (or xxx to quit)"
+
+    # Ask user for choice and check it's valid
+
+    choose = choice_checker(choose_instruction, rps_list,
+                            choose_error)
+
+    # get computer choice
+    comp_choice = random.choice(rps_list[-1])
+    print("Com Choice: ", comp_choice)
+
+    # compare choices
+
+    #  End game if exit code is typed
+
+    if choose == "xxx":
+        break
 
     # rest of loop / game
     print("You choose {}".format(choose))
