@@ -77,6 +77,7 @@ while end_game == "no":
 
     choose_instruction = "Please choose rock (r), paper " \
                         "(p), or scissors (s): "
+
     choose_error = "Please choose from rock / " \
                     "paper / scissors (or xxx to quit)"
 
@@ -87,9 +88,28 @@ while end_game == "no":
 
     # get computer choice
     comp_choice = random.choice(rps_list[-1])
-    print("Com Choice: ", comp_choice)
 
     # compare choices
+    if choose == "rock":
+        if comp_choice == "paper":
+            result = "lose"
+        if comp_choice == "scissors":
+            result = "win"
+
+    if choose == "paper":
+        if comp_choice == "scissors":
+            result = "lose"
+        if comp_choice == "rock":
+            result = "win"
+
+    if choose == "scissors":
+        if comp_choice == "win":
+            result = "lose"
+        if comp_choice == "rock":
+            result = "lose"
+
+    if choose == comp_choice:
+        result = "tied"
 
     #  End game if exit code is typed
 
@@ -97,7 +117,10 @@ while end_game == "no":
         break
 
     # rest of loop / game
-    print("You choose {}".format(choose))
+
+    print("You chose {} and COM chose {}".format(choose, comp_choice))
+    print("You {}!".format(result))
+    print()
 
     rounds_played += 1
 

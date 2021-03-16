@@ -1,6 +1,8 @@
 # Rps Component 1 ~ generate computer choice
 
 import random
+
+
 def choice_checker(question, valid_list, error):
 
     valid = False
