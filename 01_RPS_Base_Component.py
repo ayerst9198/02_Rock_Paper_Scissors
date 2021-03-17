@@ -56,6 +56,12 @@ rps_list = ["rock", "paper", "scissors", "xxx"]
 # Ask user for # of rounds, <enter> for infinite mode
 rounds = check_rounds()
 
+# Asks user if they have played before.
+
+# If 'no' show instructions
+
+
+# ask user for # of rounds then loop
 end_game = "no"
 while end_game == "no":
 
@@ -103,8 +109,8 @@ while end_game == "no":
             result = "win"
 
     if choose == "scissors":
-        if comp_choice == "win":
-            result = "lose"
+        if comp_choice == "paper":
+            result = "win"
         if comp_choice == "rock":
             result = "lose"
 
@@ -131,11 +137,7 @@ while end_game == "no":
 print()
 print("Thank you for playing")
 
-# Asks user if they have played before.
-# If 'no' show instructions
 
-
-# ask user for # of rounds then loop
 
 
 # Ask user if they want to see their game history

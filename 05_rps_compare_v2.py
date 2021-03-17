@@ -22,10 +22,10 @@ for item in rps_list:
                 result = "win"
 
         if user_choice == "scissors":
-            if comp_choice == "win":
-                result = "lose"
             if comp_choice == "rock":
-                result == "lose"
+                result = "lose"
+            if comp_choice == "paper":
+                result == "win"
 
         if user_choice == comp_choice:
             result = "tied"
